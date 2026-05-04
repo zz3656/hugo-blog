@@ -20,14 +20,14 @@ ignoreLogs = ['warning-goldmark-raw-html']
   TocOpen = false
   description = '因特吧的博客，分享技术与生活'
   author = '因特吧'
-  images = ['/logo.png']
+  images = ['logo.png']
 
   # 模式2: 个人资料
   [params.profileMode]
     enabled = true
     title = '因特吧'
     subtitle = '分享技术与生活'
-    imageUrl = '/logo.png'
+    imageUrl = 'logo.png'
     imageWidth = 120
     imageHeight = 120
 
@@ -36,10 +36,10 @@ ignoreLogs = ['warning-goldmark-raw-html']
     url = 'https://github.com/zz3656'
   [[params.socialIcons]]
     name = 'rss'
-    url = '/index.xml'
+    url = 'index.xml'
 
 [params.assets]
-  favicon = '/favicon.ico'
+  favicon = 'favicon.ico'
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
