@@ -1,0 +1,71 @@
+baseURL = 'https://zz3656.github.io/hugo-blog/'
+locale = 'zh_CN'
+defaultContentLanguage = 'zh'
+title = 'My Blog'
+theme = 'PaperMod'
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+  description = '基于 Hugo 的个人博客'
+  author = 'zz3656'
+  [params.homeInfoParams]
+    Title = '你好 👋'
+    Content = '欢迎来到我的博客'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/zz3656'
+
+[params.assets]
+  favicon = '/favicon.ico'
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'dracula'
+    lineNos = false
+    noClasses = false
+
+[menu]
+  [[menu.main]]
+    identifier = '首页'
+    name = '首页'
+    url = '/'
+    weight = 5
+  [[menu.main]]
+    identifier = '归档'
+    name = '归档'
+    url = '/archives/'
+    weight = 10
+  [[menu.main]]
+    identifier = '分类'
+    name = '分类'
+    url = '/categories/'
+    weight = 15
+  [[menu.main]]
+    identifier = '标签'
+    name = '标签'
+    url = '/tags/'
+    weight = 20
+  [[menu.main]]
+    identifier = '搜索'
+    name = '搜索'
+    url = '/search/'
+    weight = 25
