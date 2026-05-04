@@ -1,7 +1,7 @@
 baseURL = 'https://zz3656.github.io/hugo-blog/'
 locale = 'zh_CN'
 defaultContentLanguage = 'zh'
-title = 'My Blog'
+title = '因特吧'
 theme = 'PaperMod'
 ignoreLogs = ['warning-goldmark-raw-html']
 
@@ -18,8 +18,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
   ShowRssButtonInSectionTermList = true
   ShowToc = true
   TocOpen = false
-  description = '基于 Hugo 的个人博客'
-  author = 'zz3656'
+  description = '因特吧的博客，分享技术与生活'
+  author = '因特吧'
   [params.homeInfoParams]
     Title = '你好 👋'
     Content = '欢迎来到我的博客'
