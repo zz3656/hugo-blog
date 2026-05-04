@@ -20,13 +20,23 @@ ignoreLogs = ['warning-goldmark-raw-html']
   TocOpen = false
   description = '因特吧的博客，分享技术与生活'
   author = '因特吧'
-  [params.homeInfoParams]
-    Title = '你好 👋'
-    Content = '欢迎来到我的博客'
+  images = ['/logo.png']
+
+  # 模式2: 个人资料
+  [params.profileMode]
+    enabled = true
+    title = '因特吧'
+    subtitle = '分享技术与生活'
+    imageUrl = '/logo.png'
+    imageWidth = 120
+    imageHeight = 120
 
   [[params.socialIcons]]
     name = 'github'
     url = 'https://github.com/zz3656'
+  [[params.socialIcons]]
+    name = 'rss'
+    url = '/index.xml'
 
 [params.assets]
   favicon = '/favicon.ico'
@@ -40,8 +50,11 @@ ignoreLogs = ['warning-goldmark-raw-html']
       unsafe = true
   [markup.highlight]
     style = 'dracula'
-    lineNos = false
+    lineNos = true
     noClasses = false
+    codeFences = true
+    guessSyntax = true
+    tabWidth = 2
 
 [menu]
   [[menu.main]]
