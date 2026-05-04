@@ -39,17 +39,27 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Hugo
+      - name: Build with Hugo for GitHub Pages
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: Asia/Shanghai
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Upload artifact
+      - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
+      - name: Build with Hugo for Cloudflare Workers
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: Asia/Shanghai
+        run: hugo --minify --baseURL "https://hugo.zz3656.workers.dev/" --destination public-cf
+
+      - name: Prepare Workers assets
+        run: rm -rf public && mv public-cf public
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
